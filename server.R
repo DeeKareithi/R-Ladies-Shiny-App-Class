@@ -12,10 +12,10 @@ output$countries_plot <- renderPlot({
             
             )
       
-      ggplot(filtered, aes(x = date, y = confirmed, colour = country)) +
+      ggplot(filtered, aes(x = date, y = deaths)) +
       geom_line() +
       geom_point() +
-      labs(y = "confirmed")
+      labs(y = "deaths")
     })
 })
 
