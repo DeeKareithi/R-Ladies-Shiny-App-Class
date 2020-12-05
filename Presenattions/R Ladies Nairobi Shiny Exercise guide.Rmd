@@ -9,9 +9,48 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-As good coding habit, always write down at the top of the script detais that can help someone else suing the code
+As good coding habit, always write down at the top of the script detais that can help someone else suing the code.
 
-```{r cars}
+1. We use the ui.R script
+
+SO the first few lines (commented), add the details of this exercise. Author name, Date (exact or month), and purpose of the script.
+
+```{r details of script}
+#Dorcas Kareithi
+#December 2020
+#Task: Create a Shiny App to explore the reach of Nairobi R ladies in twitter
+```
+
+
+After that, we load all the libraries we may need
+
+```{r loading libraries}
+library(shiny)
+library(ggplot2)
+library(plyr)
+library(dplyr)
+library(shinyWidgets)
+library(RColorBrewer)
+library(plotly)
+library(leaflet)
+library(readxl)
+library(shinythemes)
+
+#We may need to install one more library (changed the dataset last minute when I found out that Twotter is blocked in the country I am currently at and wanted to do a live dashboard)
+#Installing the tidy covid 19 package
+
+#Install tidycovid package. Uncomment the line below
+#remotes::install_github("joachim-gassen/tidycovid19")
+
+#once done installing, comment back and load the libraries below
+
+library(tidycovid19)
+library(tidyverse)
+
+```
+
+
+```{r data preparation}
 summary(cars)
 ```
 
