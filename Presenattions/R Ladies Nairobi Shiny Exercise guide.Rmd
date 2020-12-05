@@ -9,11 +9,10 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-As good coding habit, always write down at the top of the script detais that can help someone else suing the code.
+As good coding habit, always write down at the top of the script detais that can help someone else using the code.
 
-1. We use the ui.R script
 
-SO the first few lines (commented), add the details of this exercise. Author name, Date (exact or month), and purpose of the script.
+So the first few lines (commented), add the details of this exercise. Author name, Date (exact or month), and purpose of the script.
 
 ```{r details of script}
 #Dorcas Kareithi
