@@ -1,0 +1,26 @@
+---
+title: "R Ladies Nairobi Shiny Exercise guide"
+author: "Dorcas K"
+date: "12/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+As good coding habit, always write down at the top of the script detais that can help someone else suing the code
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
