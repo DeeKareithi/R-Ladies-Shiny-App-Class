@@ -1,9 +1,11 @@
 ---
-title: "R Ladies Nairobi Shiny Exercise guide"
+title: "R Ladies Flex Dahsboaard Exercise guide"
 author: "Dorcas K"
-date: "12/5/2020"
+date: "12/15/2020"
 output: html_document
 ---
+
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -17,7 +19,7 @@ So the first few lines (commented), add the details of this exercise. Author nam
 ```{r details of script}
 #Dorcas Kareithi
 #December 2020
-#Task: Create a Shiny App to explore tcovid cases in East Africa
+#Task: Create a Shiny App to explore the reach of Nairobi R ladies in twitter
 ```
 
 
@@ -66,62 +68,3 @@ tail(ea_data)
 View(ea_data)
 
 ```
-
-```{r ui part of the script}
-# Define UI for application that draws a histogram
-ui <- fluidPage(
-    titlePanel("Kenya COVID Cases Data"),
-    
-    
-    # Sidebar with a slider input for number of bins
-    sidebarLayout(
-        sidebarPanel(
-            selectInput("CountryInput",
-                        "Country:",
-                        choices = c("Kenya", 'Uganda', "Tanzania", "Rwanda", "Burundi")),
-            
-        ),
-        
-        # Show a plot of the generated distribution
-        mainPanel(
-            
-            plotOutput("countries_plot"),
-            br(), br(),
-            
-            
-        )
-    )
-)
-```
-
-```{r server side of the code}
-# Define server logic required to draw a histogram
-server <- function(input, output) {
-    
-    output$countries_plot <-renderPlot({
-        
-        filtered <-ea_data %>% filter(
-            country== input$CountryInput
-                )
-    
-        ggplot(filtered, aes(x=date, y=deaths)) + geom_line() +geom_point() + labs(y= "Deaths")
-        
-        }
-        
-    )
-
-}
-```
-
-
-```{r combining both}
-# Run the application 
-shinyApp(ui = ui, server = server)
-```
-
-
-```{r assignment}
-#Assignment:
-#Try adding another dropdown or radio button to enable the user select the se=pecific case they want to display ie whether deaths, cases or recoveries
-```
-
