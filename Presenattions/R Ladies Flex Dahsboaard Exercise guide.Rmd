@@ -88,7 +88,48 @@ View(ea_data)
 
 ```
 
-```{r}
+```{r Editing the column sections}
+#In the first section, make it a side bar. 
+#We will then add a select input option, allowing the user to change between options selected
+#Paste the following there 
 
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+#This dashboard allows us to explore covid cases in East Africa. Please use the buttons below to interact with the dashboard
+
+ selectInput("CountryInput", label = 
+                        "Country:",
+                        choices = c("Kenya", 'Uganda', "Tanzania", "Rwanda", "Burundi"), selected = "Kenya")
+
+```
+
+```{r Editing the area that displays the chart}
+#required to draw a graph
+#Paste this:
+
+Column 
+-----------------------------------------------------------------------
+
+### The actual graph
+
+
+renderPlot({
+        
+        filtered <-ea_data %>% filter(
+            country== input$CountryInput
+                )
+    
+        ggplot(filtered, aes(x=date, y=deaths)) + geom_line() +geom_point() + labs(y= "Deaths")
+        
+        }
+        
+    )
+
+```
+
+``` {r assignment}
+#Assignment:
+#Try adding another dropdown or radio button to enable the user select the se=pecific case they want to display ie whether deaths, cases or recoveries
 ```
 

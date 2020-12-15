@@ -41,7 +41,6 @@ ea_data<-filter(mydata, country %in% c('Kenya', 'Uganda', "Tanzania", "Rwanda", 
 head(ea_data)
 tail(ea_data)
 
-View(ea_data)
 
 ```
 
@@ -63,7 +62,7 @@ This dashboard allows us to explore covid cases in East Africa. Please use the b
 Column 
 -----------------------------------------------------------------------
 
-### The actual graph
+### The actual graph (using the dlobal data we created)
 
 ```{r}
 
