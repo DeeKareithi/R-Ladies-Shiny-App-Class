@@ -84,7 +84,6 @@ ea_data<-filter(mydata, country %in% c('Kenya', 'Uganda', "Tanzania", "Rwanda", 
 head(ea_data)
 tail(ea_data)
 
-View(ea_data)
 
 ```
 
@@ -93,8 +92,8 @@ View(ea_data)
 #We will then add a select input option, allowing the user to change between options selected
 #Paste the following there 
 
-Column {.sidebar}
------------------------------------------------------------------------
+#Column {.sidebar}
+#-----------------------------------------------------------------------
 
 #This dashboard allows us to explore covid cases in East Africa. Please use the buttons below to interact with the dashboard
 
@@ -108,8 +107,8 @@ Column {.sidebar}
 #required to draw a graph
 #Paste this:
 
-Column 
------------------------------------------------------------------------
+#Column 
+#-----------------------------------------------------------------------
 
 ### The actual graph
 
@@ -128,7 +127,7 @@ renderPlot({
 
 ```
 
-``` {r assignment}
+```{r assignment}
 #Assignment:
 #Try adding another dropdown or radio button to enable the user select the se=pecific case they want to display ie whether deaths, cases or recoveries
 ```
