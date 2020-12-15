@@ -1,8 +1,9 @@
 ---
-title: "R Ladies Flex Dahsboaard Exercise guide"
+title: "R Ladies Flex Dahsboard Exercise guide"
 author: "Dorcas K"
 date: "12/15/2020"
 output: html_document
+runtime: shiny
 ---
 
 
