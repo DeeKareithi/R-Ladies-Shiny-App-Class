@@ -19,8 +19,24 @@ So the first few lines (commented), add the details of this exercise. Author nam
 ```{r details of script}
 #Dorcas Kareithi
 #December 2020
-#Task: Create a Shiny App to explore the reach of Nairobi R ladies in twitter
+#Task: Create a Flex Dashboard to explore the reach of Nairobi R ladies in twitter
 ```
+
+```{r creating the flex dashboard file}
+#Go to File
+#Select New File
+#Select R markdown
+#On the left tab, Select from template
+#Select Flex Dashboard
+```
+
+
+```{r Editing flex dashboard file to produce a shiny dashboard}
+#Add runtime: shiny to the options declared at the top of the document (bwlow vertical_layout: fill)
+#Add the {.sidebar} attribute to the first column of the dashboard to make it a host for Shiny input controls (
+
+```
+
 
 
 After that, we load all the libraries we may need
@@ -51,7 +67,10 @@ library(tidyverse)
 ```
 
 
-```{r data preparation}
+
+```{r global, include=FALSE}
+# load data in 'global' chunk so it can be shared
+# by all users of the dashboard
 
 #Load the data we dowonloaded before. Change this according to where you stored your data.
 
@@ -68,3 +87,4 @@ tail(ea_data)
 View(ea_data)
 
 ```
+
