@@ -52,9 +52,6 @@ ui <- fluidPage(
             br(), br(),
             
             
-            
-            
-            
         )
     )
 )
@@ -80,3 +77,7 @@ server <- function(input, output) {
 
 # Run the application 
 shinyApp(ui = ui, server = server)
+
+
+#Assignment:
+#Try adding another dropdown or radio button to enable the user select the se=pecific case they want to display ie whether deaths, cases or recoveries
