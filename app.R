@@ -19,7 +19,7 @@ library(readxl)
 library(shinythemes)
 
 
-#Load the data we dowonloaded before
+#Load the data we dowonloaded before. Change this according to where you stored your data.
 
 mydata<- read.csv( "C:\\Users\\Dorcas\\Documents\\GitHub\\R-Ladies-Siny-App-Class\\Data\\covid_data.csv")
 
