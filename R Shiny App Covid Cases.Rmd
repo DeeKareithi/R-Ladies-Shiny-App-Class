@@ -47,18 +47,24 @@ This dashboard allows us to explore covid cases in East Africa. Please use the b
 
 ```
 
-Column {data-width=350}
+Column 
 -----------------------------------------------------------------------
 
-### Chart B
+### The actual graph
 
 ```{r}
 
-```
-
-### Chart C
-
-```{r}
+renderPlot({
+        
+        filtered <-ea_data %>% filter(
+            country== input$CountryInput
+                )
+    
+        ggplot(filtered, aes(x=date, y=deaths)) + geom_line() +geom_point() + labs(y= "Deaths")
+        
+        }
+        
+    )
 
 ```
 
