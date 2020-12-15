@@ -28,8 +28,21 @@ library(shinythemes)
 ```{r global, include=FALSE}
 # load data in 'global' chunk so it can be shared
 # by all users of the dashboard
-library(datasets)
-data(faithful)
+
+#Load the data we dowonloaded before. Change this according to where you stored your data.
+
+mydata<- read.csv( "C:\\Users\\Dorcas\\Documents\\GitHub\\R-Ladies-Siny-App-Class\\Data\\covid_data.csv")
+
+#Filter for East African Countries
+
+ea_data<-filter(mydata, country %in% c('Kenya', 'Uganda', "Tanzania", "Rwanda", "Burundi"))
+
+#Exploring the data
+head(ea_data)
+tail(ea_data)
+
+View(ea_data)
+
 ```
 
 
