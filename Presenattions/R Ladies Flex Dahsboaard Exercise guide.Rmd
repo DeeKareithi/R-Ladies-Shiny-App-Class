@@ -68,7 +68,7 @@ library(tidyverse)
 
 
 
-```{r global, include=FALSE}
+```{r preparing the data }
 # load data in 'global' chunk so it can be shared
 # by all users of the dashboard
 
@@ -85,6 +85,10 @@ head(ea_data)
 tail(ea_data)
 
 View(ea_data)
+
+```
+
+```{r}
 
 ```
 
